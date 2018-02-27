@@ -5,6 +5,7 @@ ENV APP_POWERAI_VERSION 1
 
 ADD https://raw.githubusercontent.com/nimbix/notebook-common/master/install-ubuntu.sh /tmp/install-ubuntu.sh
 RUN bash /tmp/install-ubuntu.sh && rm -f /tmp/install-ubuntu.sh
+RUN sed -i "s|/data|/usr/local/samples|" /usr/local/bin/nimbix_notebook
 
 COPY NAE/help.html /etc/NAE/help.html
 COPY NAE/screenshot.png /etc/NAE/screenshot.png

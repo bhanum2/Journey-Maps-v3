@@ -22,7 +22,8 @@ directory - e.g. one of the following:
 	/opt/DL/theano/doc
 	/opt/DL/torch/doc
 
-This demonstration container is free for 24 hours.  
+Files created or updated in folders other than /data will be lost on container restore.
+
 After you have completed the demos, feel free to use the container to explore the capabilities of PowerAI. 
 If you have completed the demonstration, please help conserve resources by canceling the subscription used 
 to create this instance.  

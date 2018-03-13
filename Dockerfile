@@ -14,6 +14,7 @@ RUN curl --fail -X POST -d @/etc/NAE/AppDef.json https://api.jarvice.com/jarvice
 
 COPY samples /usr/local/samples
 COPY scripts/sample_notebook.sh /usr/local/scripts/sample_notebook.sh
+RUN  chmod -R 777 /usr/local/samples
 COPY samples/motd /etc/motd
 
 #add Jupyter

@@ -12,7 +12,8 @@ COPY NAE/screenshot.png /etc/NAE/screenshot.png
 COPY NAE/AppDef.json /etc/NAE/AppDef.json
 RUN curl --fail -X POST -d @/etc/NAE/AppDef.json https://api.jarvice.com/jarvice/validate
 
-COPY samples /usr/local/samples
+RUN mkdir /usr/local/samples
+COPY samples /usr/local/samples/demo
 COPY scripts/sample_notebook.sh /usr/local/scripts/sample_notebook.sh
 RUN  chmod -R 777 /usr/local/samples
 COPY samples/motd /etc/motd

@@ -34,7 +34,6 @@ RUN apt-get install -y libffi-dev
 RUN apt-get install -y python-dev
 RUN apt-get install -y python-matplotlib
 RUN apt-get install -y python-lxml
-RUN apt-get install -y openssh-server
 RUN pip install cython
 RUN apt-get install -y python-scipy
 RUN pip install scikit-learn

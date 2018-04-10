@@ -15,6 +15,7 @@ RUN curl --fail -X POST -d @/etc/NAE/AppDef.json https://api.jarvice.com/jarvice
 RUN mkdir /usr/local/samples
 COPY samples /usr/local/samples/demo
 COPY scripts/sample_notebook.sh /usr/local/scripts/sample_notebook.sh
+RUN chmod 777 /usr/local/scripts/sample_notebook.sh
 RUN  chmod -R 777 /usr/local/samples
 COPY samples/motd /etc/motd
 
@@ -53,4 +54,4 @@ WORKDIR /root
 RUN wget https://d3kbcqa49mib13.cloudfront.net/spark-2.2.0-bin-hadoop2.7.tgz
 RUN tar -xvf spark-2.2.0-bin-hadoop2.7.tgz
 
-RUN  chmod 600 /bin/sh
+RUN chmod 600 /bin/sh
